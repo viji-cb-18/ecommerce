@@ -1,0 +1,60 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background-color: #f8f9fa;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 280px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}

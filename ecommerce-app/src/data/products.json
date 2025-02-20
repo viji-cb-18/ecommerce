@@ -1,0 +1,22 @@
+[
+    { "id": 1, "name": "Laptop",  "price": 1200,  "image": "https://cdn.thewirecutter.com/wp-content/media/2024/07/laptopsunder500-2048px-5452.jpg",
+      "description": "High-performance laptop for professionals." },
+    {  "id": 2,  "name": "Smartphone",  "price": 800,
+      "image": "https://image-us.samsung.com/us/smartphones/galaxy-s24/all-gallery/01_E1_OnlineExclusive_SapphireBlue_Lockup_1600x1200.jpg",
+      "description": "Latest model smartphone with amazing features."},
+    { "id": 3,  "name": "Headphones",  "price": 150,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQTQ3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1687660671363",
+      "description": "Noise-cancelling wireless headphones."},
+    { "id": 4,  "name": "Smartwatch",  "price": 250,  "image": "https://m.media-amazon.com/images/I/61I22cL7v+L.jpg",
+    "description": "Track your fitness and notifications on the go."},
+    { "id": 5, "name": "Bluetooth Speaker",  "price": 100,
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWQW3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1716251412396",
+      "description": "Portable and powerful speaker with deep bass."},
+    { "id": 6, "name": "Gaming Mouse", "price": 70, "image": "https://images-na.ssl-images-amazon.com/images/I/61QY3V6A-NL.jpg",
+      "description": "Ergonomic gaming mouse with high DPI control."},
+    { "id": 7,  "name": "Wireless Keyboard", "price": 90, "image": "https://m.media-amazon.com/images/I/712aS12pD5L.jpg",
+        "description": "Sleek and comfortable keyboard for all devices."},
+    { "id": 8, "name": "4K Monitor", "price": 350,  "image": "https://m.media-amazon.com/images/I/71+qQN-3KvL.jpg",
+        "description": "Crystal-clear 4K UHD monitor for work and gaming."}
+  ]
+  
