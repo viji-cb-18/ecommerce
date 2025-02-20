@@ -1,12 +1,12 @@
-import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, updateQuantity } from "../store/cartSlice";
-import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { removeFromCart, updateQuantity } from '../store/cartSlice'
+import { Link } from 'react-router-dom'
 
 function Cart() {
-  const cartItems = useSelector((state) => state.cart.cartItems);
-  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.cartItems)
+  const dispatch = useDispatch()
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
   return (
     <div className="card p-3">
@@ -35,7 +35,7 @@ function Cart() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

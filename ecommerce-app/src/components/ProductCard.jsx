@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
-import { addToCart } from "../store/cartSlice";
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../store/cartSlice'
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function ProductCard({ product }) {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
-export default ProductCard;
+export default ProductCard
