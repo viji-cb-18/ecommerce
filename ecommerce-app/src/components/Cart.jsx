@@ -1,7 +1,12 @@
-import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart, updateQuantity } from "../store/cartSlice";
+import { Link } from "react-router-dom";
 
-function Cart({ cartItems, removeFromCart, updateQuantity }) {
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
+function Cart() {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
+
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <div className="card p-3">
@@ -17,12 +22,12 @@ function Cart({ cartItems, removeFromCart, updateQuantity }) {
                 <h6>{item.name}</h6>
                 <p>${item.price} x {item.quantity} = ${item.price * item.quantity}</p>
                 <div className="d-flex align-items-center">
-                  <button className="btn btn-secondary btn-sm me-2" onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}>-</button>
+                  <button className="btn btn-secondary btn-sm me-2" onClick={() => dispatch(updateQuantity({ id: item.id, quantity: Math.max(1, item.quantity - 1) }))}>-</button>
                   <span>{item.quantity}</span>
-                  <button className="btn btn-secondary btn-sm ms-2" onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  <button className="btn btn-secondary btn-sm ms-2" onClick={() => dispatch(updateQuantity({ id: item.id, quantity: item.quantity + 1 }))}>+</button>
                 </div>
               </div>
-              <button className="btn btn-danger btn-sm" onClick={() => removeFromCart(item.id)}>Remove</button>
+              <button className="btn btn-danger btn-sm" onClick={() => dispatch(removeFromCart(item.id))}>Remove</button>
             </div>
           ))}
           <h5 className="mt-3">Total: ${totalPrice.toFixed(2)}</h5>
@@ -30,7 +35,7 @@ function Cart({ cartItems, removeFromCart, updateQuantity }) {
         </>
       )}
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
